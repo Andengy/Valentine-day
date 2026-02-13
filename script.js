@@ -4,7 +4,7 @@ const response = document.getElementById("response");
 
 // YES CLICK
 yesBtn.addEventListener("click", () => {
-    response.innerHTML = "Clarise 💖 You just made me the happiest person alive! 🥰✨";
+    response.innerHTML = "My love 💖 You just made me the happiest man alive! 🥰✨";
 
     rapidHeartExplosion();
     showLoveGif();
