@@ -10,23 +10,6 @@ body {
     height: 100vh;
 }
 
-/* Floating Hearts */
-.hearts::before {
-    content: "❤️ 💕 💖 💘 💓 💗 💞";
-    position: absolute;
-    font-size: 30px;
-    animation: float 10s linear infinite;
-    white-space: nowrap;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(100vh);
-    }
-    100% {
-        transform: translateY(-10vh);
-    }
-}
 
 .container {
     text-align: center;
