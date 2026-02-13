@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
     background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     font-family: 'Arial', sans-serif;
     display: flex;
@@ -9,28 +10,54 @@ body {
     height: 100vh;
 }
 
+/* Floating Hearts */
+.hearts::before {
+    content: "❤️ 💕 💖 💘 💓 💗 💞";
+    position: absolute;
+    font-size: 30px;
+    animation: float 10s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(-10vh);
+    }
+}
+
 .container {
     text-align: center;
     background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 10;
 }
 
 h1 {
     color: #ff4d6d;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #ff1e4d;
     margin-bottom: 30px;
 }
 
 .buttons {
     position: relative;
+    height: 100px;
 }
 
 button {
-    padding: 12px 25px;
+    padding: 12px 30px;
     font-size: 18px;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
     margin: 10px;
     transition: 0.3s;
@@ -53,8 +80,8 @@ button {
 }
 
 #response {
-    margin-top: 20px;
-    font-size: 22px;
+    margin-top: 25px;
+    font-size: 24px;
     color: #ff1e4d;
     font-weight: bold;
 }
